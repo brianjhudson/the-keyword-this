@@ -99,14 +99,16 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.bind(myUser)(); //Fix this
 
 //Above you're given an object, a function, and a setTimeout invocation. After 5 seconds, what will the getUsername function return?
 //Note(no tests)
   //Answer Here
-
+  /*
+  It would return undefined because the execution context is not visible to the function inside getMyUserName, so it defaults to the window, which has no username property.
+  */
 //In the example above, what is the 'this keyword' bound to when getUsername runs?
 
   //Answer Here
-
+  // The window
 //Fix the getMyUsername invocation so that userName will be equal to 'iliketurtles'.
