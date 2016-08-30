@@ -99,7 +99,7 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername.bind(myUser)(); //Fix this
+var userName = getMyUsername.call(myUser); //Fix this
 
 //Above you're given an object, a function, and a setTimeout invocation. After 5 seconds, what will the getUsername function return?
 //Note(no tests)
