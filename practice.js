@@ -49,6 +49,16 @@
 user.getUsername();
 
 //Next Problem
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.move = 0;
+  this.moveCar = function() {
+    this.move += 10;
+    return this.move;
+  }
+}
 
 
 // Write the function definitions which will make the following function invocations function properly.
@@ -74,6 +84,8 @@ var getYear = function(){
 
 //Note(no tests)
   //Code Here
+  var getPriusYear = getYear.bind(prius);
+  var getMustangYear = getYear.bind(mustang);
 
 //New Problem
 
