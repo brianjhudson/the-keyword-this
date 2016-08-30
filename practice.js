@@ -2,19 +2,32 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
+      /*
+      'this' allows you to access the execution context of the function. In other words,
+      it allows you to pull information from the object that calls the function, which can be really
+      useful for passing information to the function after writing it. It also allows the function to be
+      reusable.
+      */
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
+      /*
+      1. Explicit binding: Does the function have an explicit binding to an object through call(), apply(), or bind()?
+      2. Implicit binding: Does the function have an object on the left side of the dot (in the invocation)?
+      3. Does the 'new' keyword bind the function to the object on the left side of the assignment statement (left of the equals)?
+      3. Default: If none of the above, use the window as the object which 'this' refers to.
 
   // 3) What is the difference between call and apply?
 
       //Answer
+      /*
+      Both methods take in the object which will be the execution context as the first parameter, and both methods invoke the function immediately, but the call() method takes in additional arguments as individual values, and apply() takes in additional arguments for the function as an array of values.
 
   // 4) What does .bind do?
 
       //Answer
-
+      /* Like call() and apply(), bind() explicitly sets the execution context for a function by binding a copy of the function to a given object in the argument. But unlike call() and apply(), bind() uses a copy of the function and does not immediately invoke the function. */
 
 //Next Problem
 
@@ -24,15 +37,12 @@
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
     //Code Here
-
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
-
 
 //Next Problem
 
 
 // Write the function definitions which will make the following function invocations function properly.
-
   //Function Invocations Here
 
 var prius = new Car('Toyota', 'Prius', 2011);
@@ -55,7 +65,6 @@ var getYear = function(){
 
 //Note(no tests)
   //Code Here
-
 
 //New Problem
 
